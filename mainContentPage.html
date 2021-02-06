@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cyril Reymond's Page</title>
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?familly=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+	body,h1,h2,h3,h4,h5,h6 {font-family: Arial, sans-serif}
+	.w3-row-padding img {margin-bottom: 12px}
+
+	/* Sidebar width */
+	.w3-sidebar {width: 120px; background: #222;}
+
+	/* Move the page content of the width of sidebar */
+	#main {margin-left: 120px}
+
+	/* Remove margin on small screens */
+	@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+</style>
+
+
+
+<body class="w3-black">
+	<!--------------------- Sidebar Large and Medium Screens --------------------->
+	<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center w3-card">
+		<img src="assets/cyril.png" style="width: 100%">
+		<a href="#home" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+			<i class="fa fa-home w3-xxlarge"></i>
+			<p>HOME</p>
+		</a>
+		<a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+			<i class="fa fa-user w3-xxlarge"></i>
+			<p>ABOUT</p>
+		</a>
+		<a href="#portfolio" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+			<i class="fa fa-code w3-xxlarge"></i>
+			<p>PORTFOLIO</p>
+		</a>
+		<a href="#photoblog" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+			<i class="fa fa-camera w3-xxlarge"></i>
+			<p>PHOTO BLOG</p>
+		</a>
+		<a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+			<i class="fa fa-comments w3-xxlarge"></i>
+			<p>CONTACT</p>
+		</a>
+	</nav>	
+	<!--------------------- End Sidebar Large and Medium Screens --------------------->
+
+	<!--------------------- Sidebar Small Screens --------------------->
+	<div class="w3-sidebar w3-bar-block w3-animate-left w3-hide-large w3-hide-medium w3-padding-32" style="display:none; background-color: #222" id="mySidebar">
+  		<button class="w3-bar-item w3-button w3-large w3-hover-black" onclick="w3_close()">Close &times;</button>
+  		<a href="#home" class="w3-bar-item w3-button w3-hover-black">HOME</a>
+  		<a href="#about" class="w3-bar-item w3-button w3-hover-black">ABOUT</a>
+  		<a href="#portfolio" class="w3-bar-item w3-button w3-hover-black">PORTFOLIO</a>
+  		<a href="#photoblog" class="w3-bar-item w3-button w3-hover-black">PHOTO BLOG</a>
+  		<a href="#contact" class="w3-bar-item w3-button w3-hover-black">CONTACT</a>
+	</div>
+
+
+	<!--------------------- End Sidebar Small Screens --------------------->
+	
+	<!--------------------- Page Content --------------------->
+	<div class="w3-padding-large" id="main" name="main">
+
+		<!--------------------- Toggle Sidebar On Small Screens --------------------->
+		<div class="w3-container w3-black w3-card w3-top  w3-hide-medium w3-hide-large" style="display:block;" id="myOpenButton">
+			<button class="w3-button w3-black w3-large" onclick="w3_open()">&#9776;</button>
+		</div>
+		<!--------------------- End Toggle Sidebar On Small Screens --------------------->
+
+		<!--------------------- Home Section --------------------->
+		<header class="w3-container w3-padding-32 w3-center w3-black" id="home" name="home">
+			<h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Cyril Reymond</h1>
+			<p>Computer Scientist and AI Enthusiast.</p>
+			<img src="assets/cyril.png" class="w3-image" style="height: 90%; width: 100%">	
+		</header>
+		<!--------------------- End Home Section --------------------->
+
+		<!--------------------- About Section --------------------->
+		<div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about" name="about">
+			<h2 class="w3-text-light-grey">About</h2>
+			<hr style="width: 200px" class="w3-opacity">
+			<p>
+				My name is Cyril Reymond, and I am a recent Computer Science and Artificial Intelligence Master degree graduate from Claude Bernard
+				Lyon 1 University. I have studied a broad range of programming languages to develop software, games and Web applications. 
+				I have several passions, and Artificial Intelligence is one of them. From Multi-agent systems to Machine Learning, AI represent for me the best way to support humans in our daily lives.
+			</p>
+
+			<h3 class="w3-padding-16 w3-text-light-grey">Working Experience</h3>
+			<h3 class="w3-padding-16 w3-text-light-grey">Education</h3>
+			<h3 class="w3-padding-16 w3-text-light-grey">Skills</h3>
+		</div>
+		<!--------------------- End About Section --------------------->
+				
+	</div>
+	<!--------------------- End Page Content --------------------->
+
+	<script>
+	function w3_open() {
+    	document.getElementById("mySidebar").style.display = "block";
+    	document.getElementById("myOpenButton").style.display = "none";
+	}
+	function w3_close() {
+    	document.getElementById("mySidebar").style.display = "none";
+    	document.getElementById("myOpenButton").style.display = "block";
+	}
+	</script>
+</body>
+</html>

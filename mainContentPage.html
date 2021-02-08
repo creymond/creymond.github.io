@@ -22,6 +22,15 @@
 	/* Remove margin on small screens */
 	@media only screen and (max-width: 600px) {#main {margin-left: 0}}
 
+	/* Download button */
+	.dbtn {
+		background-color: #222;
+		border: none;
+		color: lightgrey;
+		padding: 6px 25px;
+		cursor: pointer;
+		font-size: 16px;
+	}
 </style>
 
 
@@ -29,7 +38,7 @@
 <body class="w3-black">
 	<!--------------------- Sidebar Large and Medium Screens --------------------->
 	<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center w3-card">
-		<img src="assets/cyril.png" style="width: 100%">
+		<img src="assets/images/cyril.png" style="width: 100%">
 		<a href="#home" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
 			<i class="fa fa-home w3-xxlarge"></i>
 			<p>HOME</p>
@@ -79,7 +88,7 @@
 		<header class="w3-container w3-padding-32 w3-center w3-black" id="home" name="home">
 			<h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Cyril Reymond</h1>
 			<p>Computer Scientist and AI Enthusiast.</p>
-			<img src="assets/cyril.png" class="w3-image" style="height: 90%; width: 100%">	
+			<img src="assets/images/cyril.png" class="w3-image" style="height: 90%; width: 100%">	
 		</header>
 		<!--------------------- End Home Section --------------------->
 
@@ -93,7 +102,49 @@
 				I have several passions, and Artificial Intelligence is one of them. From Multi-agent systems to Machine Learning, AI represent for me the best way to support humans in our daily lives.
 			</p>
 
-			<h3 class="w3-padding-16 w3-text-light-grey">Working Experience</h3>
+			<!--------------------- Working Experience --------------------->
+			<h3 class="w3-padding-16 w3-text-light-grey">Work Experiences</h3>
+			<div class="w3-display-container w3-left" style="width: 100%; height: 500px">
+
+				<div class="w3-display-topmiddle w3-display-container" style="width: 100%; height: 300px">
+					<div class="w3-display-topleft w3-justify">
+						<h4>
+							<b> Research Assistant </b><br>
+						</h4>
+						<p>March - August 2020</p>
+					</div>
+
+					<div class="w3-display-topmiddle w3-justify">
+						<p>
+							<b>National Institute of Informatics, Tokyo, Japan</b> <br><br>
+							Developing a model called Iterated Belief Revision Games and concerned with the evolution of beliefs of a group of communicating agents. This research combined fields of Multi-agent system, Belief Revision and Knowledge Reasoning. The detailed model is available in my Master Thesis.
+						</p>
+					</div>
+
+					<div class="w3-display-bottommiddle w3-padding-64">
+						<button class="dbtn" type="submit" onclick="window.open('assets/files/Cyril_Reymond_Master_Thesis.pdf')"> <i class="fa fa-download"> Download Master Thesis (English version)</i> </button>
+					</div>
+				</div>
+
+				<div class="w3-display-bottommiddle w3-display-container" style="width: 100%; height: 200px">
+					<div class="w3-display-topleft w3-justify">
+						<h4>
+							<b> Java Developer Intern </b><br>
+						</h4>
+						<p>May - July 2018</p>
+					</div>
+					<div class="w3-display-topmiddle w3-justify">
+						<p>
+							<b>Siloxane, Lyon, France</b> <br><br>
+							Development of a generic interface module for HL7 medical message flows. Integration of a customizable Web service for processing data of patients into hospital's servers.
+						</p>
+					</div>
+
+				</div>
+
+			</div>
+			<!--------------------- End Working Experience --------------------->
+
 			<h3 class="w3-padding-16 w3-text-light-grey">Education</h3>
 			<h3 class="w3-padding-16 w3-text-light-grey">Skills</h3>
 		</div>

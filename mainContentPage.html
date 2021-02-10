@@ -31,6 +31,59 @@
 		cursor: pointer;
 		font-size: 16px;
 	}
+
+	.column {
+  		float: left;
+  		width: 33.33%;
+  		padding: 5px;
+	}
+
+	/* Clearfix (clear floats) */
+	.row::after {
+  		content: "";
+  		clear: both;
+  		display: table;
+	}
+
+	.imageOpacity {
+  		opacity: 1;
+  		display: block;
+  		width: 100%;
+  		height: auto;
+  		transition: .5s ease;
+  		backface-visibility: hidden;
+	}
+
+	.containerIMG {
+  		position: relative;
+  		width: 100%;
+	}
+
+	.middleIMG {
+  		transition: .5s ease;
+  		opacity: 0;
+  		position: absolute;
+  		top: 50%;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
+  		-ms-transform: translate(-50%, -50%);
+  		text-align: center;
+	}
+
+	.containerIMG:hover .imageOpacity {
+  		opacity: 0.2;
+	}
+
+	.containerIMG:hover .middleIMG {
+  		opacity: 1;
+	}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+	@media screen and (max-width: 600px) {
+  		.column {
+   			 width: 100%;
+  		}
+	}
 </style>
 
 
@@ -208,6 +261,79 @@
     		</div><br>
 		</div>
 		<!--------------------- End About Section --------------------->
+
+		<!--------------------- Portfolio Section --------------------->
+		<div class="w3-padding-64 w3-content" id="photoblog">
+			<h2 class="w3-text-light-grey">Portfolio</h2>
+			<hr style="width: 200px" class="w3-opacity">
+
+			<div class="row">
+  				<div class="column">
+  					<div class="containerIMG">
+    					<img src="assets/portfolio/ant.png" class="imageOpacity" alt="Ant" style="width:100%">
+    					<div class="middleIMG">
+    						<div class="w3-text-light-grey">Sorting Simulation</div>
+  							<a class="w3-button w3-white w3-hover-grey" style="margin: 5px" href="https://github.com/creymond/Ant-Sort-Simulation" target="_blank" rel="noopener noreferrer">Github</a>
+    					</div>
+    				</div>
+  				</div>
+  				<div class="column">
+  					<div class="containerIMG">
+  						<img src="assets/portfolio/ibrg.png" class="imageOpacity" alt="Ibrg" style="width:100%">
+  						<div class="middleIMG">
+    						<div class="w3-text-light-grey">IBRG</div>
+  							<a class="w3-button w3-white w3-hover-grey" style="margin: 5px" href="https://github.com/creymond/IBRG" target="_blank" rel="noopener noreferrer">Github</a>
+    					</div>
+  					</div>
+    				
+  				</div>
+  				<div class="column">
+  					<div class="containerIMG">
+  						<img src="assets/portfolio/checkers.png" class="imageOpacity" alt="Checkers" style="width:100%">
+  						<div class="middleIMG">
+    						<div class="w3-text-light-grey">Checkers</div>
+  							<a class="w3-button w3-white w3-hover-grey" style="margin: 5px" href="https://github.com/creymond/AI-Checkers" target="_blank" rel="noopener noreferrer">Github</a>
+    					</div>
+  					</div>
+    				
+  				</div>
+			</div>
+
+			<div class="row">
+  				<div class="column">
+  					<div class="containerIMG">
+  						<img src="assets/portfolio/atari.png" class="imageOpacity" alt="Atari" style="width:100%">
+  						<div class="middleIMG">
+  							<div class="w3-text-light-grey">Reinforcement Learning</div>
+  							<a class="w3-button w3-white w3-hover-grey" style="margin: 5px" href="https://github.com/creymond/ReinforcementDeepLearning" target="_blank" rel="noopener noreferrer">Github</a>
+  						</div>
+  					</div>
+    				
+  				</div>
+  				<div class="column">
+  					<div class="containerIMG">
+  						<img src="assets/portfolio/darkastle.png" class="imageOpacity" alt="Darkastle" style="width:100%">
+  						<div class="middleIMG">
+  							<div class="w3-text-light-grey">Darkastle</div>
+  							<a class="w3-button w3-white w3-hover-grey" style="margin: 5px" href="https://github.com/creymond/Darkastle" target="_blank" rel="noopener noreferrer">Github</a>
+  						</div>
+  					</div>
+    				
+  				</div>
+  				<div class="column">
+  					<div class="containerIMG">
+  						<img src="assets/portfolio/genetic.png" class="imageOpacity" alt="Genetic" style="width:100%">
+  						<div class="middleIMG">
+  							<div class="w3-text-light-grey">Genetic Algorithm</div>
+  							<a class="w3-button w3-white w3-hover-grey" style="margin: 5px" href="https://github.com/creymond/GeneticAlgorithm" target="_blank" rel="noopener noreferrer">Github</a>
+  						</div>
+  					</div>
+    				
+  				</div>
+			</div>
+		</div>
+
+		<!--------------------- End Portfolio Section --------------------->
 
 		<!--------------------- Photo Blog Section --------------------->
 	  	<div class="w3-padding-64 w3-content" id="photoblog">

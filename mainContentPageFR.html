@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cyril Reymond's Page</title>
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?familly=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+	body,h1,h2,h3,h4,h5,h6 {font-family: Arial, sans-serif}
+	.w3-row-padding img {margin-bottom: 12px}
+
+	/* Sidebar width */
+	.w3-sidebar {width: 120px; background: #222;}
+
+	/* Move the page content of the width of sidebar */
+	#main {margin-left: 120px}
+
+	/* Remove margin on small screens */
+	@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+	/* Download button */
+	.dbtn {
+		background-color: #222;
+		border: none;
+		color: lightgrey;
+		padding: 6px 25px;
+		cursor: pointer;
+		font-size: 16px;
+	}
+
+	.column {
+  		float: left;
+  		width: 33.33%;
+  		padding: 5px;
+	}
+
+	/* Clearfix (clear floats) */
+	.row::after {
+  		content: "";
+  		clear: both;
+  		display: table;
+	}
+
+	.imageOpacity {
+  		opacity: 1;
+  		display: block;
+  		width: 100%;
+  		height: auto;
+  		transition: .5s ease;
+  		backface-visibility: hidden;
+	}
+
+	.containerIMG {
+  		position: relative;
+  		width: 100%;
+	}
+
+	.middleIMG {
+  		transition: .5s ease;
+  		opacity: 0;
+  		position: absolute;
+  		top: 50%;
+  		left: 50%;
+  		transform: translate(-50%, -50%);
+  		-ms-transform: translate(-50%, -50%);
+  		text-align: center;
+	}
+
+	.containerIMG:hover .imageOpacity {
+  		opacity: 0.2;
+	}
+
+	.containerIMG:hover .middleIMG {
+  		opacity: 1;
+	}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+	@media screen and (max-width: 600px) {
+  		.column {
+   			 width: 100%;
+  		}
+	}
+</style>
+
+
+
+<body class="w3-black">
+	<!--------------------- Sidebar Large and Medium Screens --------------------->
+	<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center w3-card">
+		<img src="assets/images/cyril.png" style="width: 100%">
+		<a href="#accueil" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+			<i class="fa fa-home w3-xxlarge"></i>
+			<p>ACCUEIL</p>
+		</a>
+		<a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+			<i class="fa fa-user w3-xxlarge"></i>
+			<p>ABOUT</p>
+		</a>
+		<a href="#projets" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+			<i class="fa fa-code w3-xxlarge"></i>
+			<p>PROJETS</p>
+		</a>
+		<a href="#photographies" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+			<i class="fa fa-camera w3-xxlarge"></i>
+			<p>PHOTOS</p>
+		</a>
+		<a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+			<i class="fa fa-comments w3-xxlarge"></i>
+			<p>CONTACT</p>
+		</a>
+	</nav>	
+	<!--------------------- End Sidebar Large and Medium Screens --------------------->
+
+	<!--------------------- Sidebar Small Screens --------------------->
+	<div class="w3-sidebar w3-bar-block w3-animate-left w3-hide-large w3-hide-medium w3-padding-32" style="display:none; background-color: #222" id="mySidebar">
+  		<button class="w3-bar-item w3-button w3-large w3-hover-black" onclick="w3_close()">Fermer &times;</button>
+  		<a href="#accueil" class="w3-bar-item w3-button w3-hover-black">ACCUEIL</a>
+  		<a href="#accueil" class="w3-bar-item w3-button w3-hover-black">ABOUT</a>
+  		<a href="#projets" class="w3-bar-item w3-button w3-hover-black">PORTFOLIO</a>
+  		<a href="#photographies" class="w3-bar-item w3-button w3-hover-black">PHOTOS</a>
+  		<a href="#contact" class="w3-bar-item w3-button w3-hover-black">CONTACT</a>
+	</div>
+
+
+	<!--------------------- End Sidebar Small Screens --------------------->
+	
+	<!--------------------- Page Content --------------------->
+	<div class="w3-padding-large" id="main" name="main">
+
+		<!--------------------- Toggle Sidebar On Small Screens --------------------->
+		<div class="w3-container w3-black w3-card w3-top  w3-hide-medium w3-hide-large" style="display:block;" id="myOpenButton">
+			<button class="w3-button w3-black w3-large" onclick="w3_open()">&#9776;</button>
+		</div>
+		<!--------------------- End Toggle Sidebar On Small Screens --------------------->
+
+		<!--------------------- Home Section --------------------->
+		<header class="w3-container w3-padding-32 w3-center w3-black" id="home" name="home">
+			<h1 class="w3-jumbo">Cyril Reymond</h1>
+			<p>Passionné d'informatique et d'IA</p>
+			<img src="assets/images/cyril.png" class="w3-image" style="height: 90%; width: 100%">	
+		</header>
+		<!--------------------- End Home Section --------------------->
+
+		<!--------------------- About Section --------------------->
+		<div class="w3-content w3-justify w3-text-grey w3-padding-64" id="accueil" name="accueil">
+			<h2 class="w3-text-light-grey">Accueil</h2>
+			<hr style="width: 200px" class="w3-opacity">
+			<p>
+				Je m'appelle Cyril Reymond et j'ai récemment obtenu mon diplôme de Master en Infortmatique et Intelligence Artificielle à l'Université Claude Bernard Lyon 1. J'ai étudié un grand nombre de languages de programmation pour le développemnt le logiciels, jeux et applications Web. De nombreuses passions m'animent, et l'Intelligence Artificielle est l'une d'elles. En passant par les systèmes multi-agents au machine learning, l'IA représente pour moi la meilleure manière d'assister les êtres humains dans leurs quotidiens.
+			</p>
+			<div class="w3-center">
+				<button class="dbtn" type="submit" onclick="window.open('assets/files/cv/CV_FR.pdf')"> <i class="fa fa-download"> Télécharger CV</i> </button>
+			</div>
+						
+
+			<!--------------------- Working Experience --------------------->
+			<h3 class="w3-padding-16 w3-text-light-grey w3-hide-small">Expériences Professionnelles</h3>
+			<div class="w3-display-container w3-left w3-hide-small" style="width: 100%; height: 500px">
+
+				<div class="w3-display-topmiddle w3-display-container" style="width: 100%; height: 300px">
+					<div class="w3-display-topleft w3-justify">
+						<h4>
+							<b> Assistant de Recherche </b><br>
+						</h4>
+						<p>Mars - Août 2020</p>
+					</div>
+
+					<div class="w3-display-topmiddle w3-justify">
+						<p>
+							<b>National Institute of Informatics, Tokyo, Japon</b> <br><br>
+							Developpement d'un modèle appelé Iterated Belief Revision Gamesdont l'objectif est d'étudier l'évolution des croyances d'un groupe d'agents communicants. Cette recherche s'intéresse aux Systèmes Multi-Agents, la Révision des Croyances et Raisonnement sur les Connaissances. Le modèle détaillé est disponible dans ma thèse de Master.
+						</p>
+					</div>
+
+					<div class="w3-display-bottommiddle w3-padding-64">
+						<button class="dbtn" type="submit" onclick="window.open('assets/files/Cyril_Reymond_Master_Thesis.pdf')"> <i class="fa fa-download"> Télécharger Thèse de Master (Version anglaise)</i> </button>
+					</div>
+				</div>
+
+				<div class="w3-display-bottommiddle w3-display-container" style="width: 100%; height: 200px">
+					<div class="w3-display-topleft w3-justify">
+						<h4>
+							<b> Stage Developpeur Java </b><br>
+						</h4>
+						<p>Mai - Juillet 2018</p>
+					</div>
+					<div class="w3-display-topmiddle w3-justify">
+						<p>
+							<b>Siloxane, Lyon, France</b> <br><br>
+							Création d'une interface générique pour la gestion de messages médicaux suivant la norme HL7. Service Web personnalisable pour le traitement de données de patients.
+						</p>
+					</div>
+
+				</div>
+
+			</div>
+			<!--------------------- End Working Experience --------------------->
+
+			<h3 class="w3-padding-16 w3-text-light-grey w3-hide-small">Education</h3>
+			<div class="w3-display-container w3-left w3-hide-small" style="width: 100%; height: 450px">
+				<div class="w3-display-topmiddle w3-display-container" style="width: 100%; height: 250px">
+					<div class="w3-display-topleft w3-justify">
+						<h4>
+							<b> Master </b><br>
+						</h4>
+						<p>2018 - 2020</p>
+					</div>
+
+					<div class="w3-display-topmiddle w3-justify">
+						<p>
+							<b>Informatique et Intelligence Artificielle</b> <br>
+							Université Claude Bernard Lyon 1, Lyon, France<br><br>
+							
+							Master destiné à l'acquisition de connaissances et d'aptitudes en informatique et spécialisé en intelligence artificielle. Les techniques majeures en IA ont été etudié: Machine Learning, Deep Learning, Systèmes Multi-Agents, Datamining, NLP, entre autres.
+						</p>
+					</div>
+				</div>
+
+				<div class="w3-display-bottommiddle w3-display-container" style="width: 100%; height: 200px">
+					<div class="w3-display-topleft w3-justify">
+						<h4>
+							<b> Licence </b><br>
+						</h4>
+						<p>2015 - 2018</p>
+					</div>
+
+					<div class="w3-display-topmiddle w3-justify">
+						<p>
+							<b>Mathématiques et Informatique</b> <br>
+							Université Claude Bernard Lyon 1, Lyon, France<br><br>
+							
+							Licence orienté sur l'apprentissage des paradigmes de programmation et des languages informatiques ainsi que des méthodes de développement logiciel comme AGILE. De plus, cette formation propose une base solide en mathématiques théorique et pratique.
+						</p>
+					</div>
+				</div>	
+			</div>
+
+			<h3 class="w3-padding-16 w3-text-light-grey">Compétences</h3>
+			<p class="w3-wide">Python</p>
+    		<div class="w3-white">
+      			<div class="w3-dark-grey" style="height:28px;width:90%"></div>
+    		</div>
+    		
+    		<p class="w3-wide">Java</p>
+   			<div class="w3-white">
+      			<div class="w3-dark-grey" style="height:28px;width:90%"></div>
+    		</div>
+    		<p class="w3-wide">C++</p>
+    		<div class="w3-white">
+      			<div class="w3-dark-grey" style="height:28px;width:75%"></div>
+    		</div><br>
+    		<p class="w3-wide">Javascript/HTML</p>
+    		<div class="w3-white">
+      			<div class="w3-dark-grey" style="height:28px;width:60%"></div>
+    		</div><br>
+		</div>
+		<!--------------------- End About Section --------------------->
+
+		<!--------------------- Portfolio Section --------------------->
+		<div class="w3-padding-64 w3-content" id="projets">
+			<h2 class="w3-text-light-grey">Projets</h2>
+			<hr style="width: 200px" class="w3-opacity">
+
+			<div class="row">
+  				<div class="column">
+  					<div class="containerIMG">
+    					<img src="assets/portfolio/ant.png" class="imageOpacity" alt="Ant" style="width:100%">
+    					<div class="middleIMG">
+    						<div class="w3-text-light-grey">Simulation Tri</div>
+  							<a class="w3-button w3-white w3-hover-grey" style="margin: 5px" href="https://github.com/creymond/Ant-Sort-Simulation" target="_blank" rel="noopener noreferrer">Github</a>
+    					</div>
+    				</div>
+  				</div>
+  				<div class="column">
+  					<div class="containerIMG">
+  						<img src="assets/portfolio/ibrg.png" class="imageOpacity" alt="Ibrg" style="width:100%">
+  						<div class="middleIMG">
+    						<div class="w3-text-light-grey">IBRG</div>
+  							<a class="w3-button w3-white w3-hover-grey" style="margin: 5px" href="https://github.com/creymond/IBRG" target="_blank" rel="noopener noreferrer">Github</a>
+    					</div>
+  					</div>
+    				
+  				</div>
+  				<div class="column">
+  					<div class="containerIMG">
+  						<img src="assets/portfolio/checkers.png" class="imageOpacity" alt="Checkers" style="width:100%">
+  						<div class="middleIMG">
+    						<div class="w3-text-light-grey">Jeu de Dames</div>
+  							<a class="w3-button w3-white w3-hover-grey" style="margin: 5px" href="https://github.com/creymond/AI-Checkers" target="_blank" rel="noopener noreferrer">Github</a>
+    					</div>
+  					</div>
+    				
+  				</div>
+			</div>
+
+			<div class="row">
+  				<div class="column">
+  					<div class="containerIMG">
+  						<img src="assets/portfolio/atari.png" class="imageOpacity" alt="Atari" style="width:100%">
+  						<div class="middleIMG">
+  							<div class="w3-text-light-grey">Reinforcement Learning</div>
+  							<a class="w3-button w3-white w3-hover-grey" style="margin: 5px" href="https://github.com/creymond/ReinforcementDeepLearning" target="_blank" rel="noopener noreferrer">Github</a>
+  						</div>
+  					</div>
+    				
+  				</div>
+  				<div class="column">
+  					<div class="containerIMG">
+  						<img src="assets/portfolio/darkastle.png" class="imageOpacity" alt="Darkastle" style="width:100%">
+  						<div class="middleIMG">
+  							<div class="w3-text-light-grey">Darkastle</div>
+  							<a class="w3-button w3-white w3-hover-grey" style="margin: 5px" href="https://github.com/creymond/Darkastle" target="_blank" rel="noopener noreferrer">Github</a>
+  						</div>
+  					</div>
+    				
+  				</div>
+  				<div class="column">
+  					<div class="containerIMG">
+  						<img src="assets/portfolio/genetic.png" class="imageOpacity" alt="Genetic" style="width:100%">
+  						<div class="middleIMG">
+  							<div class="w3-text-light-grey">Algorithmes Génétiques</div>
+  							<a class="w3-button w3-white w3-hover-grey" style="margin: 5px" href="https://github.com/creymond/GeneticAlgorithm" target="_blank" rel="noopener noreferrer">Github</a>
+  						</div>
+  					</div>
+    				
+  				</div>
+			</div>
+		</div>
+
+		<!--------------------- End Portfolio Section --------------------->
+
+		<!--------------------- Photo Blog Section --------------------->
+	  	<div class="w3-padding-64 w3-content" id="photographies">
+	    	<h2 class="w3-text-light-grey">Photographies</h2>
+	    	<hr style="width:200px" class="w3-opacity">
+
+	    	<!-- Grid for photos -->
+	    	<div class="w3-row-padding" style="margin:0 -16px">
+	      		<div class="w3-half">
+	        		<img src="assets/images/lyon_sky.png" style="width:100%">
+	        		<img src="assets/images/skytree.png" style="width:100%">
+	        		<img src="assets/images/south.png" style="width:100%">
+	      		</div>
+
+	      	<div class="w3-half">
+	        	<img src="assets/images/tokyo.png" style="width:100%">
+	        	<img src="assets/images/tree.png" style="width:100%">
+	        	<img src="assets/images/asakusa.png" style="width:100%">
+	      	</div>
+	    	</div>
+	    	<!-- End photo grid -->
+	  	</div>
+		<!--------------------- End Photo Blog Section --------------------->
+
+		<!--------------------- Contact Section --------------------->
+		<div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+			<h2 class="w3-text-light-grey">Me Contacter</h2>
+			<hr style="width: 200px" class="w3-opacity">
+
+			<div class="w3-section">
+				<p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Lyon, France</p>
+				<p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Téléphone: +33 681805574</p>
+				<p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>E-mail: pro.cyril.reymond@gmail.com</p>
+			</div>
+		</div>
+		<!--------------------- End Contact Section --------------------->			
+		</div>
+
+		<!--------------------- Footer --------------------->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <p class="w3-medium">Produit par Cyril Reymond and <a href="https://www.w3schools.com/default.asp" target="_blank" class="w3-hover-text-green">w3schools</a></p>
+  <!-- End footer -->
+  </footer>
+	<!--------------------- End Page Content --------------------->
+
+	<script>
+	function w3_open() {
+    	document.getElementById("mySidebar").style.display = "block";
+    	document.getElementById("myOpenButton").style.display = "none";
+	}
+	function w3_close() {
+    	document.getElementById("mySidebar").style.display = "none";
+    	document.getElementById("myOpenButton").style.display = "block";
+	}
+	</script>
+</body>
+</html>
